@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Meu primeiro formulário Web 14-07/2022</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="p-3 mb-2 bg-secondary text-white">
+    <form>
+      <h1>Formulário a preencher para posterior envio - via Java-Script</h1>
+      <h1></h1>
+      <section>
+        <h2>Informações Pessoais</h2>
+        <div class="row">
+          <div class="col">
+            <label for="">Nome:</label>
+            <input width=10 type="text" class="form-control" id="Nome">
+          </div>
+          <div class="col">
+            <label for="">Sobrenome:</label>
+            <input width="10" type="text" class="form-control" id="Sobrenome">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="">Email:</label>
+            <input width=10 type="text" class="form-control" id="Email">
+          </div>
+          <div class="col">
+            <label for="">Login:</label>
+            <input type="text" class="form-control" id="Login">
+          </div>
+          <div class="col">
+            <label for="senha">Senha:</label>
+            <input type="password" class="form-control" id="Senha">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="CEP">CEP:</label>
+            <input type="text" class="form-control" id="CEP">
+          </div>
+          <div class="col">
+            <label for="Endereco">Endereço:</label>
+            <input type="text" class="form-control" id="Endereco">
+          </div>
+          <div class="col">
+            <label for="Complemento">Complemento:</label>
+            <input type="text" class="form-control" id="Complemento">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="Bairro">Bairro:</label>
+            <input type="text" class="form-control" id="Bairro">
+          </div>
+          <div class="col">
+            <label for="Cidade">Cidade:</label>
+            <input type="text" class="form-control" id="Cidade">
+          </div>
+          <div class="col">
+            <label for="Estado">Estado:</label>
+            <input type="text" class="form-control" id="Estado">
+          </div>
+        </div>
+      </section>
+      <hr></hr>
+      <section>
+        <h2>Informações profissionais</h2>
+        <div class="row">
+          <div class="col">
+            <label for="GitHub">Perfil do GitHub:</label>
+            <div class="input-group">
+              <span class="input-group-text">github.com/</span>
+              <input type="text" class="form-control" id="GitHub" placeholder="username" required>
+            </div>
+          </div>
+          <div class="col">
+            <label for="Academia">Academia:</label>
+            <select class="form-select" id="academia" required>
+              <option value="">Selecione...</option>
+              <option value="dot-net">Academia Atos - .NET</option>
+              <option value="java">Academia Atos - Java</option>
+            </select>
+          </div>
+          <div class="col">
+            <label for="Professor">Professor:</label>
+            <select class="form-select" id="Professor" required>
+              <option value="">Selecione...</option>
+              <option value="1">Alexandre Zamberlan</option>
+              <option value="2">Deivison Pasa</option>
+              <option value="3">Fabrício Tonetto</option>
+              <option value="4">Herysson Figueiredo</option>
+              <option value="5">Lucas Schlestein</option>
+              <option value="6">Ricardo Frohlich</option>
+            </select>
+          </div>
+        </div>
+      </section>
+      <hr></hr>
+      <section>
+        <h2>Termos Legais</h2>
+        <div>
+          <textarea class="form-control" rows="15" readonly>
+            Este Termo de Aceite estabelece responsabilidades e compromissos a serem cumpridos
+            pelo gestor municipal, distrital e estadual da Política de Assistência Social, decorrentes do aceite
+            do cofinanciamento federal para a oferta do Serviço de Proteção em Situações de Calamidades
+            Públicas e Emergências, Serviço de Proteção Social de Alta Complexidade, previsto na
+            Resolução nº 109/2009 (Tipificação Nacional dos Serviços Socioassistenciais do SUAS),
+            Resolução CNAS nº 012, de 11 de junho de 2013 e Portaria MDS nº 90, de 3 de setembro de
+            2013.Texto para testes iniciais, não válido.
+            Conforme pactuação da Comissão Intergestores Triparte – CIT, Resolução nº 7, de 17
+            de maio de 2013 e do Conselho Nacional de Assistência Social, Resolução do CNAS nº 12, de
+            11 de junho de 2013, para solicitar cofinanciamento federal para o Serviço de Proteção em
+            Situações de Calamidades Públicas e Emergências o ente deverá comprovar a existência de
+            reconhecimento da situação de emergência ou estado de calamidade pública por parte do
+            Ministério da Integração Nacional, na forma prevista na Lei nº 12.608, de 10 de abril de 2012 e
+            legislação aplicável.Texto para testes iniciais, não válido.
+            2.3. Garantir as provisões previstas na Tipificação Nacional dos Serviços Socioassistenciais, no
+            que diz respeito a ambiente físico, recursos materiais, recursos humanos e trabalho social
+            essencial ao serviço.
+            2.4. Assegurar a execução do Serviço de Proteção em Situações de Calamidades Públicas e
+            Emergências enquanto perdurar a situação de desabrigo ou desalojamento causada pela calamidade
+            pública ou emergência.
+            2.5. Articular com os serviços de Proteção Social Básica e Especial de Média e Alta
+            Complexidade do SUAS, fortalecendo a organização do SUAS - com a Política de saúde,
+            habitação, trabalho e demais políticas públicas, órgãos de Defesa e demais órgãos do
+            Sistema de Justiça, a fim de assegurar oferta adequada do Serviço em questão.
+            2.6. Desencadear a gradativa desmobilização de ações emergenciais, na medida em que forem
+            superados os motivos que levaram à decretação da situação de emergência ou estado de
+            calamidade pública.
+            2.7. Encaminhar novo requerimento para solicitação de prorrogação de cofinanciamento federal
+            para o serviço de proteção em situações de calamidades públicas e emergências, nos termos do
+            anexo III da Portaria MDS nº 90, de 3 de setembro de 2013, caso se avalie a necessidade de
+            continuidade do serviço após o período de decretação do estado de calamidade pública e ou de
+            emergência.
+            2.8. Observar, necessariamente, o caráter transitório do Serviço de Calamidades Públicas e
+            Emergências, em conformidade com o art. 5º da Portaria MDS nº 90, de 3 de setembro de 2013
+            e a necessidade de planejamento das ações de transição, visando à redução de esforços
+            concentrados em torno de uma situação excepcional e a adoção de procedimentos rotineiros,
+            devendo-se prevenir a brusca interrupção das provisões e prejuízo às famílias, o descontrole ou
+            a perda de equipamentos e materiais, a sobrecarga das equipes, dentre outras necessárias à
+            retomada da normalidade dos serviços cotidianos.
+            2.10. Alimentar e manter atualizadas as bases de dados dos subsistemas e aplicativos da
+            Rede SUAS, componentes dos sistemas de informação e monitoramento, conforme
+            regulação vigente.
+            2.11. Manter em arquivo físico, durante 5 (cinco) anos, documentação comprobatória das
+            despesas realizadas com a prestação dos Serviços, bem como a memória das atividades
+            realizadas, dos critérios para o acesso dos usuários e dos processos de seleção dos profissionais.
+            3
+            2.12. Observar e cumprir as normas legais e regulamentares que regem o Fundo Nacional de
+            Assistência Social – FNAS sobre a aplicação dos recursos financeiros relativos ao progresso.
+          </textarea>
+          <div>
+              <input type="checkbox" class="form-check-input" id="Termolegais" required>
+              <label class="form-check-label" for="TermoLegais">Eu li e concordo com os termos descritos
+                  acima.</label>
+          </div>
+        </div>
+        <h1></h1>
+        <h1></h1>
+        <div>
+          <div class="form-check">
+              <input name="info" id="EmailSim" type="radio" class="form-check-input" value="EmailSim" checked>
+              <label class="form-check-label" for="EmailSim">Sim, eu quero receber informações por e-mail.
+              </label>
+          </div>
+          <div class="form-check">
+              <input name="info" id="EmailNao" type="radio" class="form-check-input" value="EmailNao">
+              <label class="form-check-label" for="EmailNao">Não, eu não quero receber informações por e-mail.
+              </label>
+          </div>
+      </div>
+      </section>
+      <button type="submit" class="w-100 btn btn-primary my-4"><h2>Salvar</h2></button>
+    </form>   
+  </div> 
+  </body>
+</html>
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+

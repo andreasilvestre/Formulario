@@ -1,13 +1,4 @@
-// Exemplo 1
-function exibirAlerta() {
-    alert('O formulário preenchido foi enviado para o final desta página!');
-} 
-document.querySelector('#Salvar').onclick = exibirAlerta;
-
-
-
-
-document.getElementById('formulario').addEventListener('submit', function (e) {
+document.getElementById('Formulario').addEventListener('submit', function (e) {
     e.preventDefault();
     document.getElementById('TabelaDeDados').classList.remove('d-none');
     envioTabela();
@@ -17,7 +8,7 @@ const termosAceiteElement = document.getElementById('Aceite')
 
 termosAceiteElement.addEventListener('scroll', () => {
     if (termosAceiteElement.offsetHeight + termosAceiteElement.scrollTop >= termosAceiteElement.scrollHeight) {
-        document.getElementById("i-aceite").disabled = false;
+        document.getElementById("TermosLegais").disabled = false;
     }
 })
 
@@ -64,7 +55,7 @@ function envioTabela() {
     document.getElementById('TNome').innerHTML = document.getElementById('Nome').value;
     document.getElementById('TSobrenome').innerHTML = document.getElementById('Sobrenome').value;
     document.getElementById('TEmail').innerHTML = document.getElementById('Email').value;
-    document.getElementById('RLogin').innerHTML = document.getElementById('Login').value;
+    document.getElementById('TLogin').innerHTML = document.getElementById('Login').value;
     document.getElementById('TSenha').innerHTML = document.getElementById('Senha').value;
     document.getElementById('TCEP').innerHTML = document.getElementById('CEP').value;
     document.getElementById('TEndereco').innerHTML = document.getElementById('Endereco').value;
@@ -72,11 +63,18 @@ function envioTabela() {
     document.getElementById('TBairro').innerHTML = document.getElementById('Bairro').value;
     document.getElementById('TCidade').innerHTML = document.getElementById('Cidade').value;
     document.getElementById('TEstado').innerHTML = document.getElementById('Estado').value;
-    document.getElementById('TGithub').innerHTML = document.getElementById('GitHub').value;
+    document.getElementById('TGitHub').innerHTML = document.getElementById('GitHub').value;
     var iAcademia = document.getElementById("Academia");
     document.getElementById('TAcademia').innerHTML = iAcademia.options[iAcademia.selectedIndex].text;
     var iProfessor = document.getElementById("Professor");
     document.getElementById('TProfessor').innerHTML = iProfessor.options[iProfessor.selectedIndex].text;
     document.getElementById('TTermosLegais').innerHTML = document.getElementById('TermosLegais').value == "on" ? 'Sim' : 'Não'
-    document.getElementById('TSimOuNao').innerHTML = document.querySelector('input[name=info]:checked') == "on" ? 'Sim' : 'Não'
+    //document.getElementById('TSimOuNao').innerHTML = document.querySelector('input[name=EmailSim]:checked') == "on" ? 'Sim' : 'Não'
+    document.getElementById('TSimOuNao').innerHTML = document.getElementById("EmailSim").value == "on" ? 'Podemos enviar e-mail' : 'Não podemos enviar e-mail';
+
 };
+
+function exibirAlerta() {
+    alert('O formulário preenchido foi enviado para o final desta página!');
+} 
+document.querySelector('#Salvar').onclick = exibirAlerta;

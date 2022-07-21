@@ -42,7 +42,7 @@
         <div class="row">
           <div class="col">
             <label for="CEP">CEP:</label>
-            <input type="text" class="form-control" id="CEP">
+            <input type="text" class="form-control" id="CEP" onblur="pesquisacep()">
           </div>
           <div class="col">
             <label for="Endereco">Endereço:</label>
@@ -81,7 +81,7 @@
           </div>
           <div class="col">
             <label for="Academia">Academia:</label>
-            <select class="form-select" id="academia" required>
+            <select class="form-select" id="Academia" required>
               <option value="">Selecione...</option>
               <option value="dot-net">Academia Atos - .NET</option>
               <option value="java">Academia Atos - Java</option>
@@ -94,9 +94,7 @@
               <option value="1">Alexandre Zamberlan</option>
               <option value="2">Deivison Pasa</option>
               <option value="3">Fabrício Tonetto</option>
-              <option value="4">Herysson Figueiredo</option>
-              <option value="5">Lucas Schlestein</option>
-              <option value="6">Ricardo Frohlich</option>
+              <option value="4">Ricardo Frohlich</option>
             </select>
           </div>
         </div>
@@ -105,7 +103,7 @@
       <section>
         <h2>Termos Legais</h2>
         <div>
-          <textarea class="form-control" rows="15" readonly>
+          <textarea class="form-control" rows="15" id="Aceite" readonly>
             Este Termo de Aceite estabelece responsabilidades e compromissos a serem cumpridos
             pelo gestor municipal, distrital e estadual da Política de Assistência Social, decorrentes do aceite
             do cofinanciamento federal para a oferta do Serviço de Proteção em Situações de Calamidades
@@ -155,8 +153,9 @@
             2.12. Observar e cumprir as normas legais e regulamentares que regem o Fundo Nacional de
             Assistência Social – FNAS sobre a aplicação dos recursos financeiros relativos ao progresso.
           </textarea>
-          <div>
-              <input type="checkbox" class="form-check-input" id="TermoLegais" required>
+          
+          <div class="Checks">
+              <input type="checkbox" class="form-check-input" id="TermosLegais" required>
               <label class="form-check-label" for="TermoLegais">Eu li e concordo com os termos descritos
                   acima.</label>
           </div>
@@ -165,26 +164,26 @@
         <h1></h1>
         <div>
           <div class="form-check">
-              <input name="info" id="EmailSim" type="radio" class="form-check-input" value="EmailSim" checked>
+              <input name="info" id="EmailSim" type="radio" class="form-check-input">
               <label class="form-check-label" for="EmailSim">Sim, eu quero receber informações por e-mail.
               </label>
           </div>
           <div class="form-check">
-              <input name="info" id="EmailNao" type="radio" class="form-check-input" value="EmailNao">
+              <input name="info" id="EmailNao" type="radio" class="form-check-input">
               <label class="form-check-label" for="EmailNao">Não, eu não quero receber informações por e-mail.
               </label>
           </div>
       </div>
       </section>
       <br><br>
-      <div class="d-grid gap-3 col-5 mx-auto">
-          <input class="btn btn-primary" type="submit" value="Salvar">
-          <input class="btn btn-primary" type="reset" value="Limpar dados">
+      <div>
+          <input class="w-100 btn btn-primary my-2" type="submit" value="Salvar">
+          <input class="w-100 btn btn-primary" type="reset" value="Limpar dados">
       </div>
 
     </form>   
-    <section id="TabelaDeDados">
-      <table>
+    <section id="TabelaDeDados" class="d-none">
+      <table class="table text-white">
         <thead>
           <tr>
               <th colspan="2"><h2>Os dados recebidos do Formulário são os seguintes:</h2></th>
@@ -237,7 +236,7 @@
           </tr>
           <tr>
               <th>GitHub:</th>
-              <td id="TGithub"></td>
+              <td id="TGitHub"></td>
           </tr>
           <tr>
               <th>Academia:</th>
